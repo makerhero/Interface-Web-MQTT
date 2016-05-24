@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>.:: NodeMCU e MQTT - IoT ::.</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type='text/javascript' src='http://test.mosquitto.org/mosquitto.js'></script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.min.js'></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+	<center>
+	<table border ="0" width="100%">
+		</tr>
+			<td bgcolor = "#3D3D3F" width="30%">
+				<center><img src="filipeflop.png" height="50%" width="50%"></center>
+			</td>
+			<td bgcolor = "#3D3D3F" width="70%">
+				<center><font color =white><h1>NodeMCU e MQTT - IoT</h1><br>
+				Autores: Pedro Bertoleti e FILIPEFLOP</font>
+				</center>
+			</td>
+		</tr>		
+	</table>
+
+<div id="publish">
+    <br>
+	<font color="#3D3D3F"><b>1º passo:</b></font> definir os tópicos MQTT de subscribe e publish:
+	<p>Tópico de envio de informações: <input class="txt" id="pub-topic-text" type="text" value="MQTTFilipeFlopEnvia"></p>
+	<p>Tópico de recepcao de informações: <input class="txt" id="pub-subscribe-text" type="text" value="MQTTFilipeFlopRecebe"></p>
+	<br>
+	
+	<!--<input class="but" id="liga-output" type="button"    value="  Ligar "><br><br>
+	<input class="but" id="desliga-output" type="button" value="Desligar"><br><br>-->
+	
+</div>	 
+	
+<div id="broker">
+	<font color="#3D3D3F"><b>2º Passo:</b></font> conectar-se ao servidor / broker:<br><br>
+	<input class="but" id="connect-button" type="button" value="Conectar">
+	<input class="but" id="disconnect-button" type="button" value="Desconectar">
+</div>
+<br><br>
+<font color="#3D3D3F"><b>3º passo:</b></font> escolha a ação desejada:<br><br>
+<input class="but" id="liga-output" type="button"    value="  Ligar ">
+<input class="but" id="desliga-output" type="button" value="Desligar"><br><br>
+
+
+<p><font color="#3D3D3F"><b>Status do output (vindos do NodeMCU via MQTT):</b></font></p>
+<div id="status_io"></div>
+
+<p><b>Debug / respostas do servidor:</b></p>
+<div id="debug"></div>
+    
+	<script src="tmo.js" type="text/javascript"></script>
+	</center>
+</body>
+</html>
